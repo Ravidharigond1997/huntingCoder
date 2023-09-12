@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/Blog.module.css";
 import Link from "next/link";
 
+// step1: collect all the files from blogdata directory
+// step2: Iterate through then and dispaly them
+
 const Blog = () => {
+  const [blogs, setBlogs] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:3000/api/blogs")
+      .then((a) => {
+        return a.json();
+      })
+      .then((parsed) => {
+        setBlogs(parsed);
+      });
+  }, []);
   return (
     <>
       <style jsx>
@@ -11,31 +24,21 @@ const Blog = () => {
             font-size: 38px;
             margin-bottom: 20px;
           }
-          h3 {
-            font-size: 28px;
-          }
         `}
       </style>
       <div className={`${styles.container}`}>
-        <h2>Popular Blogs</h2>
-        <div className={`${styles.blogItem}`}>
-          <Link href={`/blogpost/learn-javascript`}>
-            <h3>How to learn Javascript in 2023?</h3>
-          </Link>
-          <p>Javascript is the language used to design logic website</p>
-        </div>
-        <div className={`${styles.blogItem}`}>
-          <Link href={`/blogpost/learn-javascript`}>
-            <h3>How to learn Javascript in 2023?</h3>
-          </Link>
-          <p>Javascript is the language used to design logic website</p>
-        </div>
-        <div className={`${styles.blogItem}`}>
-          <Link href={`/blogpost/learn-javascript`}>
-            <h3>How to learn Javascript in 2023?</h3>
-          </Link>
-          <p>Javascript is the language used to design logic website</p>
-        </div>
+        {blogs.map((blogItem) => {
+          return (
+            <div className={`${styles.blogItem}`} key={blogItem.slug}>
+              <Link href={`/blogpost/${blogItem.slug}`}>
+                <h3 className={styles.blogItemh3}>{blogItem.title}</h3>
+              </Link>
+              <p className={styles.blogItemp}>
+                {blogItem.content.substr(0, 200)}....
+              </p>
+            </div>
+          );
+        })}
       </div>
     </>
   );

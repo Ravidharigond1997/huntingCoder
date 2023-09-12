@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 
@@ -36,6 +37,26 @@ export default function Home() {
           height={158}
         />
         <p>A blog for hunting coders by a hunting coder</p>
+        <div className={`${styles.container}`}>
+          <h2>Popular Blogs</h2>
+          <div className={`${styles.blogItem}`}>
+            <Link href={`/blogpost/learn-javascript`}>
+              <h3>How to learn Javascript in 2023?</h3>
+            </Link>
+            <p>Javascript is the language used to design logic website</p>
+          </div>
+          <div className={`${styles.blogItem}`}>
+            <Link href={`/blogpost/learn-javascript`}>
+              <h3>How to learn ReactJs in 2023?</h3>
+            </Link>
+            <p>Javascript is the language used to design logic website</p>
+          </div>
+          <div className={`${styles.blogItem}`}>
+            <Link href={`/blogpost/learn-javascript`}>
+              <h3>How to learn NextJs in 2023?</h3>
+            </Link>
+          </div>
+        </div>
       </main>
     </>
   );

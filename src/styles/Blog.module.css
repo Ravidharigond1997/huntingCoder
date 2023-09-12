@@ -11,3 +11,14 @@
 .blogItem {
   margin-bottom: 30px;
 }
+
+.blogItemh3{
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.blogItemp{
+  font-size: 18px;
+   width: 45vw;
+}
