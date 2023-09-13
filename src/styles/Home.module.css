@@ -9,13 +9,13 @@
 }
  
 .title{
-  margin: 36px 0;
+  margin: 11px 0;
   line-height: 1.15rem;
-  font-size: 4rem;
+  font-size: 1.5rem;
 }
 
 .main p{
-  padding-bottom: 2rem;
+  padding-bottom: 0;
 }
 
 main .blog{
@@ -249,6 +249,10 @@ main .blog{
   margin-top: 50px;
 }
 
+.container{
+  margin:33px 0;
+}
+
 .navbar ul li {
   margin: 0 24px;
   list-style: none;
@@ -261,6 +265,20 @@ main .blog{
 } 
 
 .myImg{
-  border-radius: 10px;
-  margin: 30px 0;
+  border-radius: 115px;
+  margin: 25px 0;
+  width: 162px;
+}
+.p{
+  margin: 3px;
+}
+
+.btn{
+  background: black;
+  color:white;
+  padding:4px 3px;
+  font-size:12px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 2rem;
 }

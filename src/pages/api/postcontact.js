@@ -8,7 +8,10 @@ export default async function postcontact(req, res) {
       `contactdata/${data.length + 1}.json`,
       JSON.stringify(req.body)
     );
-    res.status(200).json(req);
+    res.status(200).send({
+      message: "success",
+      success: true,
+    });
   } else {
     res.status(200).json(["allBlogs"]);
   }

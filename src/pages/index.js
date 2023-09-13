@@ -12,11 +12,11 @@ export default function Home() {
       <style jsx>
         {`
           h2 {
-            font-size: 38px;
+            font-size: 34px;
             margin-bottom: 20px;
           }
           h3 {
-            margin-bottom: 20px;
+            margin-bottom: 7px;
             font-size: 28px;
           }
         `}
@@ -28,7 +28,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main}`}>
-        <h1 className={`${styles.title}`}>Huncting Coder</h1>
         <Image
           className={`${styles.myImg}`}
           src="/hunterHome.avif"
@@ -36,7 +35,9 @@ export default function Home() {
           width={237}
           height={158}
         />
-        <p>A blog for hunting coders by a hunting coder</p>
+        <h1 className={`${styles.title}`}>
+          <span>&lt;Huncting Coder/&gt;</span>
+        </h1>
         <div className={`${styles.container}`}>
           <h2>Popular Blogs</h2>
           <div className={`${styles.blogItem}`}>
@@ -44,17 +45,23 @@ export default function Home() {
               <h3>How to learn Javascript in 2023?</h3>
             </Link>
             <p>Javascript is the language used to design logic website</p>
+            <button className={styles.btn}>Read More</button>
           </div>
           <div className={`${styles.blogItem}`}>
             <Link href={`/blogpost/learn-javascript`}>
               <h3>How to learn ReactJs in 2023?</h3>
             </Link>
-            <p>Javascript is the language used to design logic website</p>
+            <p className={styles.p}>
+              RactJs is the language used to design logic website
+            </p>
+            <button className={styles.btn}>Read More</button>
           </div>
           <div className={`${styles.blogItem}`}>
             <Link href={`/blogpost/learn-javascript`}>
               <h3>How to learn NextJs in 2023?</h3>
             </Link>
+            <p>NextJS is the language used to design logic website</p>
+            <button className={styles.btn}>Read More</button>
           </div>
         </div>
       </main>

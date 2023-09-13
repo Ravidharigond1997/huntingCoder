@@ -23,6 +23,8 @@ const About = () => {
             padding: 1rem 8rem;
             margin-bottom: 2rem;
             font-size: 18px;
+            width: 60vw;
+            font-family: "Josefin Sans", sans-serif;
           }
           .about-content button {
             padding: 0.4rem;
