@@ -282,3 +282,10 @@ main .blog{
   border-radius: 6px;
   margin-bottom: 2rem;
 }
+ @media only screen and (max-width:600px){
+  .navbar ul li {
+    margin: 0 6px;
+    list-style: none;
+    font-weight: bold;
+  }
+ }

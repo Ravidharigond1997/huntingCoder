@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import styles from "../styles/Contact.module.css";
-import { headers } from "../../next.config";
-import { Josefin_Sans } from "next/font/google";
 
 const Contact = () => {
   const [name, setName] = useState("");
